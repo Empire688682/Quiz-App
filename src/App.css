@@ -1,42 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(146, 194, 236);
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.quiz-app{
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    transform: translateY(60px);
+    border-radius: 9px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.heading{
+    margin-bottom: 15px;
+    text-align: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.question{
+    font-size: 18px;
+    margin-bottom: 20px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.options button{
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(43, 32, 32);
+    color:white ;
+    font-size: 18px;
+    transition: .3s ease-in-out;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.options button:hover{
+    background-color: darkgray;
 }
-
-.card {
-  padding: 2em;
+.next-button{
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 35px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    transition: .3 ease-in-out;
 }
-
-.read-the-docs {
-  color: #888;
+.next-button:hover{
+    background-color: gray;
 }
