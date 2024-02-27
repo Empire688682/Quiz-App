@@ -13,7 +13,8 @@
 }
 .heading{
     margin-bottom: 15px;
-    text-align: center;
+    border-bottom: 3px solid;
+    padding-bottom: 15px;
 }
 .question{
     font-size: 18px;
@@ -52,3 +53,24 @@
 .next-button:hover{
     background-color: gray;
 }
+button.correct{
+    background-color: green;
+}
+button.wrong{
+    background-color: red;
+}
+.correct-1 {
+    background-color: green;
+  }
+  
+  .correct-2 {
+    background-color: green;
+  }
+  
+  .correct-3 {
+    background-color: green;
+  }
+  
+  .correct-4 {
+    background-color: green;
+  }
