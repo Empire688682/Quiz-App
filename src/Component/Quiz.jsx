@@ -23,42 +23,42 @@ const Quiz = () => {
           e.target.classList.add("correct");
           setLock(true);
           setScore(score + 1)
+         setNextbutton(true)
          }
          else{
           e.target.classList.add("wrong");
           option_Array[question.answer-1].current.classList.add("correct");
           setLock(true);
+          setNextbutton(true)
       }
-      setNextbutton(true)
-    
     }
   }
 
   const handleNextButton = () =>{
+    setNextbutton(false)
     if(lock === true){
       if(index === data.length - 1){
         setShowScore(true);
         return 0;
       }
+      setLock(false)
       setIndex(++index);
       setQuestion(data[index]);
-      option_Array.map((options) =>{
-        options.current.classList.remove("correct");
-        options.current.classList.remove("wrong");
-        setLock(false);
-        return null
-      })
+      for(const optionRef of option_Array){
+        optionRef.current.classList.remove("correct");
+        optionRef.current.classList.remove("wrong");
+      }
     }
   }
 
   const handleReset = () => {
     setIndex(0);
     setQuestion(data[0]);
-    setScore(0)
+    setScore(0);
     setLock(false);
     setShowScore(false);
+    setNextbutton(false)
   }
-
 
   return (
     <section className='container'>
